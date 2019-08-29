@@ -56,7 +56,7 @@ class ViewController: UIViewController, UITableViewDelegate {
   @IBAction func playPauseTimer(_ sender: AnyObject) {
     lapRestButton.isEnabled = true
   
-    changeButton(lapRestButton, title: "Lap", titleColor: UIColor.black)
+    changeButton(lapRestButton, title: "Lap", titleColor: UIColor.green)
     
     if !isPlay {
       unowned let weakSelf = self
@@ -83,7 +83,7 @@ class ViewController: UIViewController, UITableViewDelegate {
     if !isPlay {
       resetMainTimer()
       resetLapTimer()
-      changeButton(lapRestButton, title: "Lap", titleColor: UIColor.lightGray)
+      changeButton(lapRestButton, title: "Lap", titleColor: UIColor.blue)
       lapRestButton.isEnabled = false
     } else {
       if let timerLabelText = timerLabel.text {
